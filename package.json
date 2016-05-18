@@ -1,7 +1,7 @@
 {
-  "name": "presidential-edits",
+  "name": "edit-bot",
   "version": "1.0.0",
-  "description": "Twitter bot",
+  "description": "Twitter bot. Watches Wikipedia articles for edits. Tweets when articles have been revised.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
