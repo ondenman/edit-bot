@@ -1,9 +1,12 @@
 # Edit Bot
-Simple Twitterbot. Scrapes the histories of Wikipedia articles. Posts a tweet when an article has been edited.
+Twitter bot. Watches Wikipedia articles for edits. Tweets when articles have been revised.
 
 <img src="./assets/twitter.png" alt="screenshot of tweet">
 
 ## Setup
+
+Run 'npm install' to install dependencies. ([Installing Node.js and updating npm](https://docs.npmjs.com/getting-started/installing-node))
+
 Put your Twitter access tokens in `auth.js`. ([Obtaining access tokens](https://dev.twitter.com/oauth/overview))
 
 ~~~
