@@ -1,20 +1,23 @@
 'use strict'
 
 const jsonFile = require('jsonfile')
+const fs = require('fs')
 
 module.exports = (function() {
 
-    const dataFile = "data.json"
+    const dataFile = './data.json'
+
+    if (!fs.exists(dataFile)) 
+        fs.writeFileSync(dataFile, '{}')
 
     function printData() {
-        let data = jsonFile.readFileSync(dataFile)
+        let data = jsonFile.readFileSync(dataFile) || {}
         console.log(JSON.stringify(data, null, 3))
-
     }
 
     function loadData(){
-        let data = jsonFile.readFileSync(dataFile)
-        return data;
+        let data = jsonFile.readFileSync(dataFile) || {}
+        return data
     }
 
     function saveData(dataObj){
@@ -52,7 +55,8 @@ module.exports = (function() {
             let data = jsonFile.readFileSync(dataFile)
             if (data[name] !== undefined) return data[name].lastChecked
             
-            return Date.now();
+            // return Date.now();
+            return 146065952300 // dummy date
         }
 
         let lastChecked = loadLastChecked(name)
