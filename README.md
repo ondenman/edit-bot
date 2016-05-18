@@ -20,6 +20,13 @@ module.exports = {
 
 Edit `conf.json`. The first property is the list of articles you want to poll. The second is the polling interval in seconds.
 
+~~~
+{
+    "articles": ["Roald_Dahl", "Michael_Rosen", "Dick_King-Smith"],
+    "interval": 30
+}
+~~~
+
 Use the article name given in the path. For example, the article name for:
 
 ~~~
@@ -32,12 +39,6 @@ Would be:
 "E._Nesbit"
 ~~~
 
-~~~
-{
-    "articles": ["Roald_Dahl", "Michael_Rosen", "Dick_King-Smith"],
-    "interval": 30
-}
-~~~
 
 
 ## Run
