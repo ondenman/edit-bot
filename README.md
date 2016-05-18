@@ -58,13 +58,13 @@ The application creates a file called `data.json` and gathers the following info
 
 ~~~
 {
-    name: name, // article name
-    revisionCount: revisionCount, // number of revisions (since first checked)
-    editors: editors, // list of names of revision editors
-    dates: dates, // dates of revisions
-    latestComment: comment, // latest comment
-    latestURL: url, // URL of latest revision
-    lastChecked: dateNow, // last time the article was checked
-    latestEditor: latestEditor // name of editor of latest revision
+    name: <article name>
+    revisionCount: <number of revisions (since first checked)>
+    editors: <list of names of revision editors>
+    dates: <dates of revisions>
+    latestComment: <latest comment>
+    latestURL: <URL of latest revision>
+    lastChecked: <last time the article was checked>
+    latestEditor: <name of editor of latest revision>
 }
 ~~~
