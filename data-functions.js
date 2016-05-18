@@ -55,8 +55,7 @@ module.exports = (function() {
             let data = jsonFile.readFileSync(dataFile)
             if (data[name] !== undefined) return data[name].lastChecked
             
-            // return Date.now();
-            return 146065952300 // dummy date
+            return Date.now();
         }
 
         let lastChecked = loadLastChecked(name)
