@@ -46,7 +46,7 @@ Would be:
 Run in the console.
 
 ~~~
-$> node run app.js
+$> node app.js
 ~~~
 
 There is no log file. Messages are logged straight to the console:
