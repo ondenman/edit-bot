@@ -25,7 +25,6 @@ const interval = conf.interval * 1000
     checkArticles()
     console.log("Bot running "+date())
     fireTimer()
-    // tweet('Bot running. '+date())
 })()
 
 function checkArticles() {
