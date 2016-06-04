@@ -95,7 +95,7 @@ function tweet(str) {
       if (!err) {
         console.log("Tweet sent! "+date())
       } else {
-        console.dir("Twitter: "+err)
+        console.dir("Twitter: "+JSON.stringify(err, null, 3))
       }
     })
 }
