@@ -77,12 +77,12 @@ function composeTweet() {
     let fileData = data.loadData()
     articles.forEach((name)=> {
         if (fileData[name] && fileData[name].newRevisionCount > 0) {
-            let revUrl = fileData[name].latestURL
+            let revUrl = fileData[name].latestURL.replace('&oldid','&type=revision&diff')
             let revEditor = fileData[name].latestEditor
             let niceName = name.replace('_',' ')
             let dateChecked = fileData[name].lastChecked
             console.log("Update found for "+niceName)
-            let tweetStr = "User "+revEditor+" has edited "+niceName+"'s Wikipedia page: "+revUrl+" "+dateChecked
+            let tweetStr = "User "+revEditor+" edited "+niceName+"'s Wikipedia page: "+revUrl
             tweet(tweetStr)
         }
     })
