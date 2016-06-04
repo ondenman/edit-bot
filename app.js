@@ -81,8 +81,9 @@ function composeTweet() {
             let revUrl = fileData[name].latestURL
             let revEditor = fileData[name].latestEditor
             let niceName = name.replace('_',' ')
+            let dateChecked = fileData[name].lastChecked
             console.log("Update found for "+niceName)
-            let tweetStr = "User "+revEditor+" has edited "+niceName+"'s Wikipedia page: "+revUrl
+            let tweetStr = "User "+revEditor+" has edited "+niceName+"'s Wikipedia page: "+revUrl+" "+dateChecked
             tweet(tweetStr)
         }
     })
