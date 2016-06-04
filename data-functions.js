@@ -25,13 +25,15 @@ module.exports = (function() {
     }
 
     function getRevisions(body) {
-        let json = JSON.parse(body).query.pages
+        try {
+            let json = JSON.parse(body).query.pages
 
-        for (var key in json) {
-            if (json[key].revisions) return json[key].revisions
+            for (var key in json) {
+                if (json[key].revisions) return json[key].revisions
+            }
+        } catch(e){
+            return null
         }
-
-        return null
     }
 
     function scrapeData(arr, name) {
