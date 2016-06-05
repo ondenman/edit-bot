@@ -2,13 +2,15 @@
 
 const jsonFile = require('jsonfile')
 const fs = require('fs')
+const fileExists = require('file-exists')
 
 module.exports = (function() {
 
     const dataFile = './data.json'
 
-    if (!fs.exists(dataFile)) 
+    if (!fileExists(dataFile)) {
         fs.writeFileSync(dataFile, '{}')
+    }
 
     function printData() {
         let data = jsonFile.readFileSync(dataFile) || {}
